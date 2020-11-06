@@ -5,11 +5,15 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
     <style>
         html {
             scroll-behavior: smooth;
+            font-family: Montserrat, sans-serif;
         }
 
         body {
@@ -22,13 +26,33 @@
             text-decoration: none;
             color: darkcyan;
         }
+
+        .blur {
+            -webkit-filter: blur(8px);
+            -moz-filter: blur(8px);
+            -o-filter: blur(8px);
+            -ms-filter: blur(8px);
+            filter: blur(8px);
+        }
+
     </style>
+
+    <script>
+        setTimeout(function() {
+            jQuery(window).scroll(function() {
+                if (jQuery(window).scrollTop() > 50) {
+                    jQuery(".title").addClass("blur");
+                    jQuery(".title").fadeOut("slow");
+                }
+            });
+        }, 1)
+    </script>
 
     <body>
         
-        <center style='background: url("https://image.freepik.com/free-photo/blurred-hotel-reception_1203-89.jpg");'> <!-- Title/Logo -->
+        <center class="title" style='background: url("https://image.freepik.com/free-photo/blurred-hotel-reception_1203-89.jpg");'> <!-- Title/Logo -->
             <h2>&nbsp;</h2>
-            <h1>Sunshine Hotels</h1>
+            <h1 style="font-family: Nunito, sans-serif;">Sunshine Hotels</h1>
             <p>The best hotel group on Roblox</p>
             <h2>&nbsp;</h2>
         </center><center>
@@ -55,7 +79,7 @@
         <p>&nbsp;</p>
 
         <div class="main" id="about"> <!-- About -->
-            <h2>ABOUT</h2>
+            <h3 style="font-family: Nunito, sans-serif;">ABOUT</h3>
             <p>
                 Sunshine is a hotel on Roblox that is currently in beta.<br>
                 It was founded on 11/01/20 by RedBigz and princesslover17859.
@@ -65,7 +89,7 @@
         <p>&nbsp;</p>
 
         <div class="main" id="sessions"> <!-- Session times -->
-            <h2>SESSION TIMES</h2>
+            <h3 style="font-family: Nunito, sans-serif;">SESSION TIMES</h3>
             <p>The session times ae below. If your timezone isn't Australian Eastern Standard Time, then use the converter below.</p>
             <ul>
                 <li>Saturday 2:00pm AEST <strong>Interviews</strong> <a id="download-button" class="waves-effect" href="https://google.com/search?q=Saturday%202:00 pm%20AEST">Convert</a></li>
