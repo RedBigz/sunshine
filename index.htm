@@ -41,8 +41,9 @@
         setTimeout(function() {
             jQuery(window).scroll(function() {
                 if (jQuery(window).scrollTop() > 50) {
-                    jQuery(".title").addClass("blur");
-                    jQuery(".title").fadeOut("slow");
+                    jQuery(".title").addClass("blur")
+                } else {
+                    jQuery(".title").removeClass("blur")
                 }
             });
         }, 1)
